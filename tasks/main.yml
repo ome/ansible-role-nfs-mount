@@ -18,5 +18,7 @@
     name: "{{ item.path }}"
     opts: "{{ item.opts | default(nfs_mount_opts) }}"
     src: "{{ item.location }}"
+    dump: "{{ item.dump | default(omit) }}"
+    passno: "{{ item.passno | default(omit) }}"
     state: mounted
   with_items: "{{ nfs_share_mounts }}"
