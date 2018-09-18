@@ -12,7 +12,7 @@
   become: yes
   apt:
     pkg: nfs-common
-    state: latest
+    state: present
   when: ansible_os_family == "Debian"
 
 # Do not create mountpoint using file, the mount module will create it
