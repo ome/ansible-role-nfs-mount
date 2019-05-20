@@ -1,13 +1,14 @@
 NFS Mount
 =========
 
-Manage NFS4 mounts.
+Manage NFS mounts.
 
 
 Role Variables
 --------------
 
-- `nfs_mount_opts`: Default NFS4 mount options
+- `nfs_mount_opts`: Default NFS mount options
+- `nfs_version`: Default NFS version to use (4)
 - `nfs_share_mounts`: List of dictionaries of NFS shares:
    - path: mount-point
    - location: nfs server path
@@ -20,6 +21,8 @@ Example Playbook
 ----------------
 
     - hosts: localhost
+      vars:
+        nfs_version: 3 # to force nfs version to 3.
       roles:
       - role: nfs-mount
         nfs_share_mounts:
