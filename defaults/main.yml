@@ -4,5 +4,8 @@
 # List of NFS shares
 nfs_share_mounts: []
 
+# NFS version, default 4
+nfs_version: 4
+
 # Default NFS4 mount options
 nfs_mount_opts: rsize=8192,wsize=8192,timeo=14,intr
