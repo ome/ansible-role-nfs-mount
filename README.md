@@ -1,6 +1,9 @@
 NFS Mount
 =========
 
+[![Build Status](https://travis-ci.org/ome/ansible-role-nfs-mount.svg)](https://travis-ci.org/ome/ansible-role-nfs-mount)
+[![Ansible Role](https://img.shields.io/ansible/role/41357.svg)](https://galaxy.ansible.com/ome/nfs_mount/)
+
 Manage NFS mounts.
 
 
@@ -24,7 +27,7 @@ Example Playbook
       vars:
         nfs_version: 3 # to force nfs version to 3.
       roles:
-      - role: nfs-mount
+      - role: ome.nfs_mount
         nfs_share_mounts:
         - path: /mnt/remote
           location: nfs.example.org:/data
