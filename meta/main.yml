@@ -1,16 +1,18 @@
+---
 galaxy_info:
+  role_name: nfs_mount
   author: ome-devel@lists.openmicroscopy.org.uk
   description: Manage NFS4 mounts
   company: Open Microscopy Environment
   license: BSD
-  min_ansible_version: 2.1
+  min_ansible_version: 2.4
   platforms:
-  - name: EL
-    versions:
-    - 7
-  - name: Ubuntu
-    versions:
-      - xenial
+    - name: EL
+      versions:
+        - 7
+    - name: Ubuntu
+      versions:
+        - xenial
   galaxy_tags: []
 
 dependencies: []

@@ -2,14 +2,14 @@
 # tasks file for roles/nfs-mount
 
 - name: Install NFS mount utility
-  become: yes
+  become: true
   yum:
     name: nfs-utils
     state: present
   when: ansible_os_family == "RedHat"
 
 - name: Install NFS mount utility
-  become: yes
+  become: true
   apt:
     pkg: nfs-common
     state: present
@@ -20,7 +20,7 @@
 # permissions on an existing directory
 
 - name: Mount NFS share
-  become: yes
+  become: true
   mount:
     fstype: nfs
     name: "{{ item.path }}"

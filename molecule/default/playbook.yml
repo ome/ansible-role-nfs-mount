@@ -1,0 +1,36 @@
+---
+- hosts: all
+
+  pre_tasks:
+
+    - name: Create unprivileged test user
+      user:
+        name: test
+        uid: 12345
+
+    - name: Create directories
+      file:
+        path: "{{ item }}"
+        state: directory
+        owner: test
+      with_items:
+        - /srv/share
+        - /mnt/ro
+        - /mnt/rw
+
+  roles:
+
+    - role: ome.nfs_share
+      nfs_shares:
+        /srv:
+          - host: "*"
+            options: "rw,fsid=0"
+
+    - role: ansible-role-nfs-mount
+      nfs_share_mounts:
+        - path: /mnt/rw
+          location: localhost:/share
+          opts: rw
+        - path: /mnt/ro
+          location: localhost:/share
+          opts: ro
