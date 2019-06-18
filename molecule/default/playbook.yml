@@ -22,7 +22,7 @@
 
     - role: ome.nfs_share
       nfs_shares:
-        /srv/share:
+        /srv:
           - host: "*"
             options: "rw,fsid=0"
 

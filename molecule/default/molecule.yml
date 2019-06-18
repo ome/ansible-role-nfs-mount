@@ -13,7 +13,7 @@ platforms:
     privileged: true
     volumes:
       # This allows NFS exports to work on Docker
-      - "nfs-share-rw:/srv/share"
+      - "nfs-share-rw:/srv"
 provisioner:
   name: ansible
   lint:
