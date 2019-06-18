@@ -20,7 +20,7 @@
 
   roles:
 
-    - role: openmicroscopy.nfs-share
+    - role: ome.nfs_share
       nfs_shares:
         /srv/share:
           - host: "*"
