@@ -28,5 +28,5 @@
     src: "{{ item.location }}"
     dump: "{{ item.dump | default(omit) }}"
     passno: "{{ item.passno | default(omit) }}"
-    state: mounted
+    state: "{{ item.state | default( 'mounted' ) }}"
   with_items: "{{ nfs_share_mounts }}"

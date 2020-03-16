@@ -18,6 +18,7 @@ Role Variables
    - opts: mount options (optional)
    - dump: fs to dump (optional)
    - passno: fs checks on reboot (optional)
+   - state: choose (https://docs.ansible.com/ansible/latest/modules/mount_module.html#parameter-state "the state") (default: mounted)
 
 
 Example Playbook
@@ -31,6 +32,10 @@ Example Playbook
         nfs_share_mounts:
         - path: /mnt/remote
           location: nfs.example.org:/data
+        # remove a mount from a server
+        - path: /mnt/remote_old
+          location: nfs.example.org:/data1337
+          state: absent
         - path: /mnt/readonly
           location: nfs.example.org:/read-only
           opts: "{{ nfs_mount_opts }},ro"
