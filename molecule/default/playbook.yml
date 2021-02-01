@@ -13,6 +13,7 @@
         path: "{{ item }}"
         state: directory
         owner: test
+        mode: 0755
       with_items:
         - /srv/share
         - /mnt/ro
