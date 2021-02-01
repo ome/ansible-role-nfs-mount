@@ -1,7 +1,7 @@
 NFS Mount
 =========
 
-[![Build Status](https://travis-ci.org/ome/ansible-role-nfs-mount.svg)](https://travis-ci.org/ome/ansible-role-nfs-mount)
+[![Actions Status](https://github.com/ome/ansible-role-nfs-mount/workflows/Molecule/badge.svg)](https://github.com/ome/ansible-role-nfs-mount/actions)
 [![Ansible Role](https://img.shields.io/ansible/role/41357.svg)](https://galaxy.ansible.com/ome/nfs_mount/)
 
 Manage NFS mounts.
