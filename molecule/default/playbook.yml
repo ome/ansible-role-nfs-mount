@@ -21,13 +21,13 @@
 
   roles:
 
-    - role: ome.nfs_share
+    - role: nfs_share
       nfs_shares:
         /srv:
           - host: "*"
             options: "rw,fsid=0"
 
-    - role: ansible-role-nfs-mount
+    - role: nfs_mount
       nfs_share_mounts:
         - path: /mnt/rw
           location: localhost:/share

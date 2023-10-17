@@ -3,14 +3,16 @@
 
 - name: Install NFS mount utility
   become: true
-  yum:
+  ansible.builtin.dnf:
+    update_cache: true
     name: nfs-utils
     state: present
   when: ansible_os_family == "RedHat"
 
 - name: Install NFS mount utility
   become: true
-  apt:
+  ansible.builtin.apt:
+    update_cache: true
     pkg: nfs-common
     state: present
   when: ansible_os_family == "Debian"
