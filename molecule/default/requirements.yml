@@ -1,7 +1,2 @@
 ---
-- name: nfs_share
-  src: https://github.com/pwalczysko/ansible-role-nfs-share/
-  version: Rocky9
-- name: nfs_mount
-  src: https://github.com/pwalczysko/ansible-role-nfs-mount/
-  version: Rocky9
+- name: ome.nfs_share
