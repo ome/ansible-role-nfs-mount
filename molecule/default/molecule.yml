@@ -9,10 +9,15 @@ lint: |
   flake8
 platforms:
   - name: nfs-mount
-    image: centos/systemd
+    image: eniocarboni/docker-rockylinux-systemd:9
     image_version: latest
     command: /sbin/init
     privileged: true
+    cgroupns_mode: host
+    tmpfs:
+      - /sys/fs/cgroup
+    groups:
+      - extra_options
     volumes:
       # This allows NFS exports to work on Docker
       - "nfs-share-rw:/srv"

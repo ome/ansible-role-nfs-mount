@@ -9,10 +9,10 @@ galaxy_info:
   platforms:
     - name: EL
       versions:
-        - 7
+        - 9
     - name: Ubuntu
       versions:
-        - xenial
+        - jammy
   namespace: ome
   galaxy_tags: []
 

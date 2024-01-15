@@ -27,7 +27,7 @@
           - host: "*"
             options: "rw,fsid=0"
 
-    - role: ansible-role-nfs-mount
+    - role: ome.nfs_mount
       nfs_share_mounts:
         - path: /mnt/rw
           location: localhost:/share
