@@ -23,7 +23,7 @@
 
 - name: Mount NFS share
   become: true
-  mount:
+  ansible.builtin.mount:
     fstype: nfs
     name: "{{ item.path }}"
     opts: "vers={{ nfs_version }},{{ item.opts | default(nfs_mount_opts) }}"
