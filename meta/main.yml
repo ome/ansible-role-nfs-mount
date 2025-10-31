@@ -5,7 +5,7 @@ galaxy_info:
   description: Manage NFS4 mounts
   company: Open Microscopy Environment
   license: BSD
-  min_ansible_version: 2.4
+  min_ansible_version: 2.11
   platforms:
     - name: EL
       versions:
